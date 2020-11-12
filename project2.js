@@ -1,23 +1,27 @@
-var button = document.querySelector('.button')
-var inputValue = document.querySelector('.inputValue')
-var name = document.querySelector('.name');
-var desc = document.querySelector('.desc');
+var input = document.querySelector('.input_text');
+var main = document.querySelector('#name');
 var temp = document.querySelector('.temp');
+var desc = document.querySelector('.desc');
+var clouds = document.querySelector('.clouds');
+var button= document.querySelector('.submit');
 
-button.addEventListener('click', function(){
-    fetch('http://api.openweathermap.org/data/2.5/weather?q=' + inputValue.value + '&units=metric&appid=f9b55ed47ec85cc75b973ea3d76dd0c4')
+button.addEventListener('click', function(name){
+    fetch('http://api.openweathermap.org/data/2.5/weather?q=' + input.value + '&units=metric&appid=f9b55ed47ec85cc75b973ea3d76dd0c4')
     .then(responce => responce.json())
     .then(data => {
-        var nameValue = data['name'];
+        
         var tempValue = data['main']['temp'];
-        var descValue = data['weather'][0]['description'];
+  var nameValue = data['name'];
+  var descValue = data['weather'][0]['description'];
 
-        name.innerHTML = nameValue;
-        temp.innerHTML = tempValue;
-        desc.innerHTML = descValue;
+  main.innerHTML = nameValue;
+  desc.innerHTML = "Desc - "+descValue;
+  temp.innerHTML = "Temp - "+tempValue;
+  input.value ="";
+        
 
         console.log(data);
     })
 
-
+.catch(err => alert("Can´t find city"))
 })

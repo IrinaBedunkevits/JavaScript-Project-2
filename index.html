@@ -8,15 +8,25 @@
 </head>
 <body>
 
-<div class="input">
-    <input type="text" class="inputValue" placeholder="Enter a city">
-    <input type="submit" value="Submit" class="button">
+<div class="main">
+    <div class="header">
+          <h1>OpenWeatherMap API</h1>
+          <p>Enter any city name in the input box below to get the data</p>
 </div>
 
-<div class="display">
-    <h1 class="name">hi</h1>
-    <p class="desc">hi</p>
-    <p class="temp"></p>
+<div class="input">
+    <input type="text" placeholder="Enter the city" class="input_text">
+    <input type="submit" value="Submit" class="submit">
+  </div>
+</div>
+
+<div class="container">
+    <div class="card">
+      <h1 class="name" id="name"></h1>
+      <p class="temp"></p>
+      <p class="clouds"></p>
+      <p class="desc"></p>
+    </div>
 </div>
 
 <script src="project2.js"></script>
@@ -24,3 +34,5 @@
 </body>
 
 </html>
+
+
