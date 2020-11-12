@@ -17,7 +17,7 @@ $(document).ready(function(){
                     },
                         function(data) {
                             let out='';
-                            out += 'Weather'
+                            out += 'Weather: <b>'
                         }
                 );
             });
