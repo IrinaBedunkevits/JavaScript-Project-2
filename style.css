@@ -28,7 +28,7 @@ input[type="submit"] {
   width: 600px;
   height: 55px;
   padding: 5px 10px;
-  background: #e7e7e7;
+  background: #65a7ac;
   border: none;
   border-radius: 1px;
   font-family: "Nunito", sans-serif;
@@ -38,7 +38,7 @@ input[type="submit"] {
 
 .card {
   width: 50%;
-  background: #e7e7e7;
+  background: #65a7ac;
   height: 40vh;
   margin: 50px auto;
   border-radius: 2px;
@@ -60,4 +60,8 @@ input[type="submit"] {
   text-align: center;
   margin: 40px 0;
   font-size: 20px;
+}
+
+.main {
+  text-align: center;
 }
