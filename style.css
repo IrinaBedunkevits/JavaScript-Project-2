@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.input {
+  text-align: center;
+}
+
+input[type="text"] {
+  height: 50px;
+  width: 600px;
+  background: cornflowerblue;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+}
