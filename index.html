@@ -10,7 +10,26 @@ integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4
 </head>
 <body>
 
-<p>hello</p>
+<h1>Weather</h1>
+
+<div class="left">
+<p>
+<label for="">Country: </label>
+    <select>
+        <option disabled selected>Choose the country</option>
+        <option value="FI">Finland</option>
+        <option value="JP">Japan</option>
+        <option value="RU">Russia</option>
+    </select>
+</p>
+<p><label for="">City</label>
+    <div id="city"></div>
+</p>
+</div>
+
+<div class="right">
+    <div id="weather"></div>
+</div>
 
 <script src="project2.js"></script>
 
