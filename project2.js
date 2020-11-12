@@ -15,6 +15,10 @@ button.addEventListener('click', function()
   var tempValue = Math.round(data['main']['temp']);
   var nameValue = data['name'];
   var descValue = data['weather'][0]['description'];
+  var icon = 
+  "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+
+  $('.icon').attr('src', icon);
 
   main.innerHTML = nameValue;
   desc.innerHTML = descValue;

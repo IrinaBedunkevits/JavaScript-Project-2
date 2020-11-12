@@ -6,12 +6,20 @@
 
 body {
   font-family: "Nunito", sans-serif;
-  background: #f8f8f8;
+  background-image: linear-gradient(rgba(15, 62, 15, 0), rgba(15, 62, 15, 1)),
+    url(kuvat/windmill.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #efefef !important;
+  background-attachment: fixed;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .input {
   text-align: center;
   margin: 100px auto;
+  opacity: 70%;
 }
 
 input[type="submit"] {
@@ -22,6 +30,7 @@ input[type="submit"] {
   font-family: "Nunito", sans-serif;
   font-weight: bold;
   font-size: 20px;
+  opacity: 70%;
 }
 
 .input input[type="text"] {
@@ -42,6 +51,8 @@ input[type="submit"] {
   height: 40vh;
   margin: 50px auto;
   border-radius: 2px;
+  opacity: 70%;
+  text-align: center;
 }
 
 .close {
@@ -64,4 +75,5 @@ input[type="submit"] {
 
 .main {
   text-align: center;
+  text-shadow: 2px 2px 4px #000000;
 }
