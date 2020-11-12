@@ -12,7 +12,7 @@ button.addEventListener('click', function()
     .then(responce => responce.json())
     .then(data => {
         
-  var tempValue = Math.round(data['main']['temp']);
+  var tempValue = Math.round(data['main']['temp']) + '&deg;C ';  
   var nameValue = data['name'];
   var descValue = data['weather'][0]['description'];
   var icon = 
