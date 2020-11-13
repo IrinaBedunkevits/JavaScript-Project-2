@@ -1,32 +1,43 @@
-var input = document.querySelector('.city_name');
-var main = document.querySelector('#name');
-var temp = document.querySelector('.temp');
-var desc = document.querySelector('.desc');
-var button= document.querySelector('.submit');
+// variables
+
+var input = document.querySelector('.city');
+var cityname = document.querySelector('.cityname');
+var celsius = document.querySelector('.celsius');
+var cript = document.querySelector('.cript');
+var button= document.querySelector('.find');
+var icon = document.querySelector('.icon');
+
+// adding button dynamically
 
 button.addEventListener('click', function()
+
+// sending request, function definiton
 
 {
     fetch('http://api.openweathermap.org/data/2.5/weather?q=' + input.value + '&units=metric&appid=f9b55ed47ec85cc75b973ea3d76dd0c4')
     .then(responce => responce.json())
     .then(data => {
         
-  var tempValue = Math.round(data['main']['temp']) + '&deg;C ';  
-  var nameValue = data['name'];
-  var descValue = data['weather'][0]['description'];
+  var celsiusValue = Math.round(data['main']['temp']) + '&deg;C ';  
+  var citynameValue = data['name'];
+  var criptValue = data['weather'][0]['description'];
   var icon = 
   "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
 
-  $('.icon').attr('src', icon);
-  
-  //document.getElementsByClassName(".icon").attr('src', icon);
+  // what is showing in HTML
 
-  main.innerHTML = nameValue;
-  desc.innerHTML = descValue;
-  temp.innerHTML = tempValue;
+  // $('.icon').attr('src', icon);  // <--- mitä tämän tilelle, jos ei käytetä jQueryä?
+
+  icon.innerHTML = icon;  // <--- tämä komento ei toimi
+  cityname.innerHTML = citynameValue;
+  cript.innerHTML = criptValue;
+  celsius.innerHTML = celsiusValue;
   input.value ="";
+  
 
 })
 
-.catch(err => alert("Can´t find city"))
+// catching invalid city name
+
+.catch(err => alert("Please, enter valid cityname."))
 })
