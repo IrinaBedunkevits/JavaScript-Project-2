@@ -11,7 +11,7 @@ var icon = document.querySelector('.icon');
 
 button.addEventListener('click', function()
 
-// sending request, function definiton
+// sending request, function definiton, getting info
 
 {
     fetch('http://api.openweathermap.org/data/2.5/weather?q=' + input.value + '&units=metric&appid=f9b55ed47ec85cc75b973ea3d76dd0c4')
@@ -26,15 +26,13 @@ button.addEventListener('click', function()
 
   // what is showing in HTML
 
-  // $('.icon').attr('src', icon);  // <--- mitä tämän tilelle, jos ei käytetä jQueryä?
-
-  icon.innerHTML = icon;  // <--- tämä komento ei toimi
+  $('.icon').attr('src', icon);  // <--- mitä tämän tilalle, jos ei käytetä jQueryä?
+  // icon.innerHTML = icon;  // <--- tämä komento ei toimi
   cityname.innerHTML = citynameValue;
   cript.innerHTML = criptValue;
   celsius.innerHTML = celsiusValue;
   input.value ="";
   
-
 })
 
 // catching invalid city name
