@@ -1,8 +1,7 @@
-var input = document.querySelector('.input_text');
+var input = document.querySelector('.city_name');
 var main = document.querySelector('#name');
 var temp = document.querySelector('.temp');
 var desc = document.querySelector('.desc');
-var clouds = document.querySelector('.clouds');
 var button= document.querySelector('.submit');
 
 button.addEventListener('click', function()
@@ -19,6 +18,8 @@ button.addEventListener('click', function()
   "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
 
   $('.icon').attr('src', icon);
+  
+  //document.getElementsByClassName(".icon").attr('src', icon);
 
   main.innerHTML = nameValue;
   desc.innerHTML = descValue;

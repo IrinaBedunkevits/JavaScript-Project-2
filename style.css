@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: Helvetica, sans-serif;
   background-image: linear-gradient(rgba(15, 62, 15, 0), rgba(15, 62, 15, 1)),
     url(kuvat/windmill.jpg);
   background-size: cover;
@@ -16,9 +16,11 @@ body {
   padding-bottom: 50px;
 }
 
-.input {
+/* City input */
+
+.cityinputfield {
   text-align: center;
-  margin: 100px auto;
+  margin: 80px auto;
   opacity: 70%;
 }
 
@@ -27,27 +29,30 @@ input[type="submit"] {
   background: #e7e7e7;
   border: none;
   border-radius: 1px;
-  font-family: "Nunito", sans-serif;
+  font-family: Helvetica, sans-serif;
   font-weight: bold;
   font-size: 20px;
   opacity: 70%;
 }
 
-.input input[type="text"] {
+.cityinputfield input[type="text"] {
   width: 600px;
   height: 55px;
   padding: 5px 10px;
-  background: #65a7ac;
+  background: #efefef;
   border: none;
   border-radius: 1px;
-  font-family: "Nunito", sans-serif;
+  font-family: Helvetica, sans-serif;
   font-weight: bold;
   font-size: 20px;
+  color: #efefef;
 }
+
+/* Weather info box */
 
 .card {
   width: 50%;
-  background: #65a7ac;
+  background: #b7c1c1;
   height: 40vh;
   margin: 50px auto;
   border-radius: 2px;
@@ -73,7 +78,7 @@ input[type="submit"] {
   font-size: 20px;
 }
 
-.main {
+.weather {
   text-align: center;
   text-shadow: 2px 2px 4px #000000;
 }
