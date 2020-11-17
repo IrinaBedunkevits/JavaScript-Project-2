@@ -5,7 +5,7 @@ var cityname = document.querySelector('.cityname');
 var celsius = document.querySelector('.celsius');
 var cript = document.querySelector('.cript');
 var button= document.querySelector('.find');
-var icon = document.querySelector('.icon');
+var icon = document.querySelector('#icon');
 
 // adding button dynamically
 
@@ -21,13 +21,10 @@ button.addEventListener('click', function()
   var celsiusValue = Math.round(data['main']['temp']) + '&deg;C ';  
   var citynameValue = data['name'];
   var criptValue = data['weather'][0]['description'];
-  var icon = 
-  "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
 
   // what is showing in HTML
 
-  $('.icon').attr('src', icon);  // <--- mitä tämän tilalle, jos ei käytetä jQueryä?
-  // icon.innerHTML = icon;  // <--- tämä komento ei toimi
+  document.getElementById('icon').innerHTML += "<img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'></img>";
   cityname.innerHTML = citynameValue;
   cript.innerHTML = criptValue;
   celsius.innerHTML = celsiusValue;
