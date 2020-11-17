@@ -24,7 +24,7 @@ button.addEventListener('click', function()
 
   // what is showing in HTML
 
-  document.getElementById('icon').innerHTML += "<img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'></img>";
+  document.getElementById('icon').innerHTML = "<img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'></img>";
   cityname.innerHTML = citynameValue;
   cript.innerHTML = criptValue;
   celsius.innerHTML = celsiusValue;
