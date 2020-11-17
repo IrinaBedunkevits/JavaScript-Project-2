@@ -14,7 +14,7 @@ button.addEventListener('click', function()
 // sending request, function definiton, getting info
 
 {
-    fetch('http://api.openweathermap.org/data/2.5/weather?q=' + input.value + '&units=metric&appid=f9b55ed47ec85cc75b973ea3d76dd0c4')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=' + input.value + '&units=metric&appid=f9b55ed47ec85cc75b973ea3d76dd0c4')
     .then(responce => responce.json())
     .then(data => {
         
